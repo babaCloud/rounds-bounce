@@ -859,7 +859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onGameScoreCanvas: {fileID: 324344083}
-  speed: 0.028
+  speed: 0.003
   lineTagName: Line
   scoreTagName: Score
   line: {fileID: 1922198877}

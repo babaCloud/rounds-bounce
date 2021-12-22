@@ -79,17 +79,18 @@ public class BallController : MonoBehaviour
         float lineVecAngle = Vector3.Angle(lineVec, new Vector3(1, 0, 0));
 
         //書いた線の法線ベクトル(逆ベクトルも含む)
-        normalLine.gameObject.transform.position = this.gameObject.transform.position;       
-        normalLine.gameObject.transform.localEulerAngles = new Vector3(0, 0, lineVecAngle + 90);
-        Vector2 normalVertex = line.transform.TransformPoint(normalVertexObj.transform.position); 
-        Vector2 normalVec = new Vector2(normalVertex.x - this.gameObject.transform.position.x,
-            normalVertex.y - this.gameObject.transform.position.y);
+        //normalLine.gameObject.transform.position = this.gameObject.transform.position;       
+        //normalLine.gameObject.transform.localEulerAngles = new Vector3(0, 0, lineVecAngle + 90);
+        //Vector2 normalVertex = line.transform.TransformPoint(normalVertexObj.transform.position); 
+        //Vector2 normalVec = new Vector2(normalVertex.x - this.gameObject.transform.position.x,
+        //    normalVertex.y - this.gameObject.transform.position.y);
 
     
         //計算　消す　動く       
         line.gameObject.SetActive(false);
-        transform.RotateAround(this.gameObject.transform.position, normalVec, 180.0f);
-        transform.eulerAngles = new Vector3(0f, 0f, -this.gameObject.transform.eulerAngles.z);
+        //transform.RotateAround(this.gameObject.transform.position, normalVec, 180.0f);
+        //transform.eulerAngles = new Vector3(0f, 0f, -this.gameObject.transform.eulerAngles.z);
+        transform.RotateAround(this.gameObject.transform.position, lineVec, 180.0f);
     }
 
     /// <summary>
